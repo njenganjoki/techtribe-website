@@ -1,0 +1,206 @@
+/* Base Styling */
+body {
+  font-family: Anton, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f8ff;
+  color: #333;
+  scroll-behavior: smooth;
+
+
+
+
+
+
+
+
+header img {
+  height: 80px;
+  margin-bottom: 15px;
+
+  border-radius: 50%; /* Make logo round */
+  box-shadow: 0 0 15px 5px #7CFC00;
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+/* Glow animation keyframes */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px 5px #7CFC00;
+  }
+  50% {
+    box-shadow: 0 0 30px 10px #32CD32;
+  }
+}
+
+
+
+
+
+
+header h1 {
+  font-size: 2.5rem;
+    padding: 30px 20px;
+
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+header .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+  background-color: #0056b3;
+}
+
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+nav {
+  background-color: #e8f5e9;
+  padding: 15px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+nav a {
+  margin: 0 12px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #388e3c;
+}
+
+/* Sections */
+section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons */
+.btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Form Inputs */
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form select:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.photo-category {
+  margin-bottom: 40px;
+}
+
+.photo-category h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: gray;
+  padding: 20px;
+  background-color: #f9f9f9;
+  animation: fadeIn 2s ease;
+}
+
+.gallery-container {
+      background-color: blue;
+      color:  white; /* optional: for better contrast */
+ }     
+ .register{
+      background-color: blue;
+      color:  white; /* optional: for better contrast */
+ }     

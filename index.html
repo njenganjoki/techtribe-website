@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>techtribe kenya</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <<script src="script.js"></script>
+</head>
+<body>
+  
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#programs">Programs</a>
+    <a href="#timetable">Timetable</a>
+    <a href="#register">Join Us</a>
+    <a href="#gallery">Gallery</a>
+    
+    <a href="#contact">Contact</a>
+    
+  </nav>
+ <style>
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Transparent black */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  nav a:hover {
+    background: #ff5722;
+    color: black;
+  }
+</style>
+
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      color: black;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .carousel-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #ff5722;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e64a19;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="carousel-bg"></div>
+    <img src="techtribelogo.png" alt="Logo">
+    
+    
+  </header>
+
+  <script>
+    const images = [
+      "images/pic1.jpg",
+      "images/pic8.jpg",
+      "images/pic7.jpg",
+      "images/pic4.jpg",
+      "images/pic5.jpg"
+    ];
+
+    let index = 0;
+    const bg = document.querySelector(".carousel-bg");
+
+    // Set the first background image
+    bg.style.backgroundImage = `url(${images[index]})`;
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      bg.style.backgroundImage = `url(${images[index]})`;
+    }, 5000); // 5 seconds delay between slides
+  </script>
+</body>
+</html>
+
+
+
+
+
+  <style>
+  #home {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  #home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  #home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .highlight {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 30px 0 10px;
+    color: #FFD700; /* Gold text for highlight */
+  }
+
+  .sub-section {
+    margin-top: 30px;
+  }
+
+  .sub-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .sub-section p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+  }
+</style>
+
+<section id="home">
+
+
+
+  <img src="gallery 5.png" alt="Welcome Banner">
+</section>
+
+
+  <style>
+  #about {
+    background-color: #007BFF; /* Modern blue */
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 12px;
+  
+
+  #about img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+  
+
+  .about-text {
+    max-width: 500px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .about-text strong {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+  #home {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  #home h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  #home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .highlight {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 30px 0 10px;
+    color: #FFD700; /* Gold text for highlight */
+  }
+
+  .sub-section {
+    margin-top: 30px;
+  }
+
+  .sub-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff
+</style>
+
+
+
+
+  <style>
+  #about {
+    background-color: #007BFF; /* Modern blue */
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 12px;
+     }
+  
+
+  #about img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+  
+
+  .about-text {
+    max-width: 500px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .about-text strong {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+</style>
+
+<section id="about">
+  <img src="1735581990755.jpg" alt="Faith Njoki Njenga">
+  <div class="about-text">
+    <h2>About Us</h2>
+    <p>The TechTribe was founded to help children and teens develop essential digital skills. It's designed for beginners and open to both in-person and online learners.</p>
+    <p><strong>Founder:</strong> Faith Njoki Njenga – A passionate educator and digital literacy advocate.</p>
+  </div>
+</section>
+
+
+<style>
+  #programs {
+    background-color: #007BFF;
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  #programs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .program-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .program-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .program-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03);
+  }
+
+  .program-list i {
+    font-size: 1.4rem;
+    color: #FFD700;
+  }
+</style>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<section id="programs">
+  <h2>Programs / Courses</h2>
+  <ul class="program-list">
+    <li><i class="fas fa-paint-brush"></i> Graphic Design (Canva)</li>
+    <li><i class="fas fa-code"></i> Intro to programming(CSS,java,javascript, HTML, Python basics and many more programming languages)</li>
+    <li><i class="fas fa-keyboard"></i> Typing Skills</li>
+    <li><i class="fas fa-shield-alt"></i> Internet Safety & Digital Literacy</li>
+    <li><i class="fas fa-video"></i> Video Editing for Beginners</li>
+    <li><i class="fas fa-bullhorn"></i> Social Media & Content Creation</li>
+    <li><i class="fas fa-envelope-open-text"></i> Emails & Google Basics (Docs, Drive, Gmail)</li>
+    <li><i class="fas fa-rocket"></i> Digital Entrepreneurship</li>
+    <li><i class="fas fa-user-tie"></i> virtual assistance</li>
+
+  </ul>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register & Pay - TechTribe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .register {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: 50px;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register & Pay - TechTribe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .register {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: 50px;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register & Pay - TechTribe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .register {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      margin-top: 50px;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="register">
+  <h2>Join Us / Registration</h2>
+
+  <form id="registrationForm" action="https://formsubmit.co/your-email@example.com" method="POST" target="_blank">
+    <label>Name: <input type="text" name="name" required></label><br><br>
+    <label>Age: <input type="number" name="age" required></label><br><br>
+    <label>Email: <input type="email" name="email" required></label><br><br>
+    <label>Mode:
+      <select name="mode" required>
+        <option value="online">Online</option>
+        <option value="inperson">In-person</option>
+      </select>
+    </label><br><br>
+
+    <p>After registering, proceed to payment. Then join our WhatsApp group.</p>
+
+    <!-- Hidden for FormSubmit -->
+    <input type="hidden" name="_subject" value="New Registration - TechTribe">
+    <input type="hidden" name="_autoresponse" value="Thank you for registering with TechTribe! Please proceed to payment using the link provided and join our WhatsApp group.">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+
+    <button type="submit" class="btn">Register</button>
+  </form>
+
+  <p id="formMessage" style="color: green; font-weight: bold;"></p>
+</section>
+
+<script>
+  const form = document.getElementById("registrationForm");
+
+  form.addEventListener("submit", function () {
+    document.getElementById("formMessage").innerText = "Thank you for registering! Proceeding to payment...";
+
+    // Open Pesapal Payment
+    setTimeout(() => {
+      window.open("https://invoicing.pesapal.com/InvoicePay.aspx?id=2e44a35c-c730-41e4-a3d2-f7b52cd25b06", "_blank");
+    }, 1000);
+
+    // Open WhatsApp Group after 4 seconds
+    setTimeout(() => {
+      window.open("https://wa.me/254799842714?text=Hello%20I%20have%20completed%20registration%20and%20payment.%20Kindly%20add%20me%20to%20the%20TechTribe%20group.", "_blank");
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>
+
+
+
+  
+
+
+  <section id="gallery">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Club Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .gallery-container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .photo-category {
+      margin-bottom: 40px;
+    }
+    .photo-category h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .photo-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <h1>Computer Club Gallery</h1>
+
+    <div class="photo-category">
+      <h2>Teamwork & Collaboration</h2>
+      <div class="photo-grid">
+        <img src="tech3.jpg" alt="Group coding">
+        <img src="gallery 1.png" alt="Pair programming">
+        <img src="gallery3.png" alt="Discussion">
+      </div>
+    </div>
+
+    <div class="photo-category">
+      <h2>lerning in action</h2>
+      <div class="photo-grid">
+        <img src="please 4.avif" alt="Students laughing">
+        <img src="please 1.jpg" alt="Tech props">
+        <img src="please 5.avif" alt="Snacks break">
+      </div>
+    </div>
+
+  
+
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Why Join TechTribe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: blue; 
+      color: white;
+    }
+
+    #why-join {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #why-join h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: white;
+      background-color: blue;
+    }
+
+    .benefits-list {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+
+    .benefits-list li {
+      background-color: blue;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-left: 6px solid #00e5ff;
+      border-radius: 8px;
+      font-size: 1.1em;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .benefits-list li:hover {
+      background-color: blue;
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+<body>
+
+  <section id="why-join">
+    <h2>Why Join TechTribe?</h2>
+    <ul class="benefits-list">
+      <li> Learn real tech skills like coding, typing, and digital design and many more</li>
+      <li> Build fun projects like games, animations, and websites</li>
+      <li> Boost creativity and problem-solving through hands-on learning</li>
+      <li> Learn from expert instructors in a fun Zoom classroom</li>
+      <li> Join a growing community of digital-savvy kids & teens</li>
+      <li> Learn how to stay safe and smart online (digital safety)</li>
+      <li> Prepare for future careers in technology</li>
+      <li> Parent-friendly:</li>
+      <li> Access helpful learning resources & project templates</li>
+      <li> Get support and feedback from mentors and peers</li>
+      
+    </ul>
+  </section>
+
+</body>
+</html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TechTribe</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #contact {
+      background-color: blue;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin: 40px 20px;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    #contact p.description {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .contact-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-links a:hover {
+      color: #FFD700;
+      transform: scale(1.2);
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+    }
+
+    .class-info {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #FFD700;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebea5;
+    }
+
+    @media (max-width: 600px) {
+      #contact h2 {
+        font-size: 2rem;
+      }
+
+      .contact-links {
+        gap: 25px;
+        font-size: 1.2rem;
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+      }
+
+      input, textarea {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="description">Have a question or want to join TechTribe? Reach out through any of the platforms below — we’d love to hear from you!</p>
+
+    <div class="contact-links">
+      <a href="https://wa.me/254799842714" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp contact-icon"></i>
+      </a>
+      <a href="mailto:techtribe3649@gmail.com">
+        <i class="fas fa-envelope contact-icon"></i>
+      </a>
+      <a href="https://www.instagram.com/tec.htribe" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram contact-icon"></i>
+      </a>
+    </div>
+
+    
+
+    <form action="https://formspree.io/f/mwpbbonp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254799842714" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
+
+
+  <footer>
+    <p>&copy; 2025 techbyte. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
