@@ -458,91 +458,17 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .register {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      background-color: white;
-      margin-top: 50px;
-    }
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #45a049;
-    }
-    h2 {
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Register & Pay - TechTribe</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .register {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      background-color: white;
-      margin-top: 50px;
-    }
-    .btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #45a049;
-    }
-    h2 {
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Register & Pay - TechTribe</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-    }
-    .register {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
       background-color: blue;
+      color: white;
+    }
+    .register {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
       margin-top: 50px;
     }
     .btn {
@@ -561,45 +487,57 @@
     }
   </style>
 </head>
-< class=section"register">
-  <h2>Join Us / Registration</h2>
-  <form id="registrationForm">
+
+<body>
+
+<section class="register">
+  <h2>Join TechTribe</h2>
+  
+  <form id="registrationForm" action="https://formsubmit.co/njenganjoki783@gmail.com.com" method="POST" target="_blank">
     <label>Name: <input type="text" name="name" required></label><br><br>
     <label>Age: <input type="number" name="age" required></label><br><br>
-    <label>email: <input type="email" name="contact" required></label><br><br>
+    <label>Email: <input type="email" name="email" required></label><br><br>
     <label>Mode: 
-      <select name="mode">
+      <select name="mode" required>
         <option value="online">Online</option>
         <option value="inperson">In-person</option>
       </select>
     </label><br><br>
-    <p>Payment details will be sent after registration. Join our WhatsApp group after registering.</p>
+    
+    <p>After registering, you will be redirected to payment and WhatsApp group.</p>
+    
+    <input type="hidden" name="_subject" value="New Registration - TechTribe">
+    <input type="hidden" name="_autoresponse" value="Thank you for registering with TechTribe! Please proceed to payment using the link provided and join our WhatsApp group.">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+
     <button type="submit" class="btn">Register</button>
   </form>
-  <p id="formMessage"></p>
+
+  <p id="formMessage" style="color: green; font-weight: bold;"></p>
 </section>
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Register & Pay</title>
-  <script src="https://checkout.flutterwave.com/v3.js"></script>
-</head>
-<body>
+<script>
+  const form = document.getElementById("registrationForm");
 
-  
-  </section>
+  form.addEventListener("submit", function () {
+    document.getElementById("formMessage").innerText = "Thank you for registering! Redirecting...";
 
-  <script>
-    document.getElementById("registrationForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Redirect directly to your Pesapal invoice payment page
-      window.location.href = "https://invoicing.pesapal.com/InvoicePay.aspx?id=2e44a35c-c730-41e4-a3d2-f7b52cd25b06";
-    });
-  </script>
+    // Open Pesapal Payment after 2 seconds
+    setTimeout(() => {
+      window.open("https://invoicing.pesapal.com/InvoicePay.aspx?id=2e44a35c-c730-41e4-a3d2-f7b52cd25b06", "_blank");
+    }, 2000);
 
-
+    // Open WhatsApp Group after 5 seconds
+    setTimeout(() => {
+      window.open("https://wa.me/254799842714?text=Hello%20I%20have%20completed%20registration%20and%20payment.%20Kindly%20add%20me%20to%20the%20TechTribe%20group.", "_blank");
+    }, 5000);
+  });
 </script>
+
+</body>
+</html>
+
 
 
 
