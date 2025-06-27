@@ -561,65 +561,47 @@
     }
   </style>
 </head>
+< class=section"register">
+  <h2>Join Us / Registration</h2>
+  <form id="registrationForm">
+    <label>Name: <input type="text" name="name" required></label><br><br>
+    <label>Age: <input type="number" name="age" required></label><br><br>
+    <label>email: <input type="email" name="contact" required></label><br><br>
+    <label>Mode: 
+      <select name="mode">
+        <option value="online">Online</option>
+        <option value="inperson">In-person</option>
+      </select>
+    </label><br><br>
+    <p>Payment details will be sent after registration. Join our WhatsApp group after registering.</p>
+    <button type="submit" class="btn">Register</button>
+  </form>
+  <p id="formMessage"></p>
+</section>
 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register & Pay</title>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
 <body>
-<form id="registrationForm">
-  <label>Name: <input type="text" name="name" required></label><br><br>
-  <label>Age: <input type="number" name="age" required></label><br><br>
-  <label>Email: <input type="email" name="email" required></label><br><br>
-  <label>Mode:
-    <select name="mode" required>
-      <option value="online">Online</option>
-      <option value="inperson">In-person</option>
-    </select>
-  </label><br><br>
 
-  <!-- Hidden for FormSubmit -->
-  <input type="hidden" name="_subject" value="New Registration - TechTribe">
-  <input type="hidden" name="_autoresponse" value="Thank you for registering with TechTribe! Please proceed to payment using the link provided and join our WhatsApp group.">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="box">
+  
+  </section>
 
-  <button type="submit" class="btn">Register</button>
-</form>
-
-<p id="formMessage" style="color: green; font-weight: bold;"></p>
-
-<script>
-  const form = document.getElementById("registrationForm");
-
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop page reload
-
-    document.getElementById("formMessage").innerText = "Thank you for registering! Redirecting to payment...";
-
-    // ✅ Send form data to FormSubmit
-    fetch("https://formsubmit.co/njenganjoki783@gmail.com", {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        // ✅ Open Pesapal payment page
-        setTimeout(() => {
-          window.open("https://invoicing.pesapal.com/InvoicePay.aspx?id=2e44a35c-c730-41e4-a3d2-f7b52cd25b06", "_blank");
-        }, 2000);
-
-        // ✅ Open WhatsApp group
-        setTimeout(() => {
-          window.open("https://wa.me/254799842714?text=Hello%20I%20have%20completed%20registration%20and%20payment.%20Kindly%20add%20me%20to%20the%20TechTribe%20group.", "_blank");
-        }, 5000);
-
-      } else {
-        document.getElementById("formMessage").innerText = "Error submitting form. Please try again.";
-      }
-    }).catch(error => {
-      document.getElementById("formMessage").innerText = "Error: " + error.message;
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      // Redirect directly to your Pesapal invoice payment page
+      window.location.href = "https://invoicing.pesapal.com/InvoicePay.aspx?id=2e44a35c-c730-41e4-a3d2-f7b52cd25b06";
     });
-  });
+  </script>
+
+
 </script>
+
+
 
 
 
